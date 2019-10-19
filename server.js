@@ -3,7 +3,7 @@ const app = express();
 const { db, users, products, carts, orders, wishlist } = require('./database/database');
 const session=require('express-session')
 
-const {passport}=require('./passportsetup/setupmypassport');
+const {passport}=require('./passportsetup/passportsetrup');
 const userroute = require('./routes/user');
 const vendorroute=require('./routes/vendor');
 

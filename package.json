@@ -1,0 +1,29 @@
+{
+  "name": "hackcbs",
+  "version": "1.0.0",
+  "description": "HEALTH",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarunjolly/hackcbs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarunjolly/hackcbs/issues"
+  },
+  "homepage": "https://github.com/tarunjolly/hackcbs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.0.6",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "sequelize": "^5.21.1",
+    "sqlite3": "^4.1.0"
+  }
+}
