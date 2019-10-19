@@ -1,5 +1,5 @@
 body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #8daf31, #ffbb00);
 }
 .flip-card {
     background-color: transparent;
@@ -8,6 +8,14 @@ body{
     border: hidden;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
+
+  .nav{
+    background-color:rgba(192,192,192,0.3);
+}
+
+.nav-bar{
+    font-size: 25px;
+}
   
   /* This container is needed to position the front and back side */
   .flip-card-inner {
