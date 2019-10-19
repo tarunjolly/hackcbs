@@ -91,41 +91,46 @@ app.get('/login',(req,res)=>{
 //     }
 // })
 
-// //facebook signin
-// app.get('/login/fb', passport.authenticate('facebook'))
-// app.get('/login/fb/callback', passport.authenticate('facebook', {
-//   successRedirect: '/user',
-//   failureRedirect: '/login'
-// }))
-
-// //google signin
-// app.get('/login/google', passport.authenticate('google',{ scope:
-//     [ 'email', 'profile' ] }
-//     ))
-  
-//   app.get('/login/google/callback', passport.authenticate('google', {
-//     successRedirect: '/user',
-//     failureRedirect: '/login'
-//   }))
-
 // //signup
-// app.post('/signup',(req,res)=>{
-//     users.create(
-//         {
-//             username:req.body.username,
-//             password:req.body.password,
-//             usertype:req.body.usertype,
-//             // phone:req.body.phone
-//         })
-//         .then((user)=>{
-//            // console.log(user)
-//             res.redirect('/login')
-//         })
-//         .catch((err)=>{
-//             console.log(err)
-//             res.redirect('/signup')
-//         })
-// })
+app.post('/signup',(req,res)=>{
+    if(req.body.usertype=='doctor'){
+    Users.create(
+        {
+            username:req.body.username,
+            password:req.body.password,
+            usertype:req.body.usertype,
+            speciality:req.body.speciality,
+            clinic:req.body.usertype,
+            experience:req.body.experience,
+            phone:req.body.phone
+        })
+        .then((user)=>{
+           // console.log(user)
+            res.redirect('/login')
+        })
+        .catch((err)=>{
+            console.log(err)
+            res.redirect('/signup')
+        })}
+    else{
+        Users.create(
+                {
+                    username:req.body.username,
+                    password:req.body.password,
+                    email:req.body.email,
+                    usertype:req.body.usertype,
+                    phone:req.body.phone
+                })
+                .then((user)=>{
+                   // console.log(user)
+                    res.redirect('/login')
+                })
+                .catch((err)=>{
+                    console.log(err)
+                    res.redirect('/signup')
+                })
+    }
+})
 
 
 //signup page

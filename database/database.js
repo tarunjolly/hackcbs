@@ -6,14 +6,28 @@ const db= new Sequelize({
 const Users = db.define('user',{
     username: {
         type: Sequelize.STRING,
-        unique: true,
         allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
-        unique: true,
+        
         allowNull: true,
       },
+      usertype:{
+          type:Sequelize.STRING
+      },
+      usertype:{
+        type:Sequelize.NUMBER
+    },
+      speciality:{
+        type:Sequelize.STRING
+    },
+    experience:{
+        type:Sequelize.STRING
+    },
+    clinic:{
+        type:Sequelize.STRING
+    },
       password: {
         type: Sequelize.STRING,
         allowNull: true,
