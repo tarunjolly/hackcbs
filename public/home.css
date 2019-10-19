@@ -1,18 +1,9 @@
 body{
-    background-image: linear-gradient(120deg,#4bb048,#ddfb31);
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
-
-.navbar{
-    background: rgba(255, 255, 255, 0.356);
-}
-
-.nav-bar{
-    font-size: 25px;;
-}
-
 .emp-profile{
     padding: 3%;
-    margin-top: 13%;
+    margin-top: 3%;
     margin-bottom: 3%;
     border-radius: 0.5rem;
     background: #fff;

@@ -45,10 +45,16 @@ app.get('/login/google/callback', passport.authenticate('google', {
 }))
 
 
-
+app.get('/adddetails',(req,res)=>{
+    res.render('adddetails')
+})
 
 app.get('/',function(req,res){
     res.render('home');
+})
+
+app.get('/history',function(req,res){
+    res.render('history')
 })
 
 
