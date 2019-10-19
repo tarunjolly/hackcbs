@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +19,15 @@
         crossorigin="anonymous"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="home.css">
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-        <a class="navbar-brand" href="/">HOME</a>
+               <a href="/"> <img src="logo.jpg" height="45px" width="45px"></a>
+
+        {{!-- <a class="navbar-brand" href="/">HOME</a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,9 +40,9 @@
                     <a class="nav-link" href="/history">History<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Book appointment<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/appointment">Book appointment<span class="sr-only">(current)</span></a>
                 </li>
-                
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <a class="nav-link" href="/logout">logout<span class="sr-only">(current)</span></a>
@@ -47,5 +51,51 @@
         </div>
     </nav>
 
+<div class="container emp-profile">
+        <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <!-- <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                            <h3>Kshiti Ghelani</h3>
+                                    <center><b><h5 >History</h5></b></center>
+                                    <!-- <h6>
+                                        Web Developer and Designer
+                                    </h6> -->
+                                    <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
+
+                    </div>
+                    <div class="container">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>Affliction</th>
+                                <th>Doctor</th>
+                                <th>Medicine</th>
+                                <th>Prescription</th>
+                                <th>Duration</th>
+                            </tr>
+                            <tr>
+                                <td>Cancer</td>
+                                <td>Dr Sanjay</td>
+                                <td>Zantac</td>
+                                <td><a href="">Open</a></td>
+                                <td>3 Months</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                
+            </form>                     
+        </div>
 </body>
+
 </html>

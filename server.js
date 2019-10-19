@@ -59,6 +59,10 @@ app.get('/history',function(req,res){
 
 
 
+app.get('/appointment',function(req,res){
+    res.render('appointment')
+})
+
 
 
 
