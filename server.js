@@ -30,7 +30,7 @@ app.use(passport.session())
 
 app.get('/login/fb', passport.authenticate('facebook'))
 app.get('/login/fb/callback', passport.authenticate('facebook', {
-  successRedirect: '/todos',
+  successRedirect: '/home',
   failureRedirect: '/login'
 }))
 
@@ -40,7 +40,7 @@ app.get('/login/google', passport.authenticate('google',{ scope:
   ))
 
 app.get('/login/google/callback', passport.authenticate('google', {
-  successRedirect: '/todos',
+  successRedirect: '/home',
   failureRedirect: '/login'
 }))
 
@@ -48,12 +48,8 @@ app.get('/login/google/callback', passport.authenticate('google', {
 
 
 app.get('/',function(req,res){
-    res.render('userhome');
+    res.render('home');
 })
-
-
-// app.use('/user', userroute);
-// app.use('/vendor',vendorroute);
 
 
 
@@ -81,15 +77,10 @@ app.get('/login',(req,res)=>{
 
 
 // //authenitcate the person
-// app.post('/login',passport.authenticate('local',{failureRedirect:'/login'}),function(req,res){
-//     console.log(req.user)
-//     if(req.user.usertype=='user')
-//     res.redirect('/user');
-//     else 
-//     {
-//         res.redirect('/vendor');
-//     }
-// })
+app.post('/login',passport.authenticate('local',{failureRedirect:'/login',successRedirect:'/'}),function(req,res){
+    console.log(req.user)
+    
+})
 
 // //signup
 app.post('/signup',(req,res)=>{
