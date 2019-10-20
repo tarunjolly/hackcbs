@@ -45,7 +45,7 @@ app.get('/login/google/callback', passport.authenticate('google', {
 }))
 
 
-app.get('/adddetails',(req,res)=>{
+app.get('/adddetails',checkLoggedIn,(req,res)=>{
     res.render('adddetails')
 })
 
@@ -53,30 +53,46 @@ app.get('/',function(req,res){
     res.render('homemain');
 })
 
-app.get('/history',function(req,res){
+app.get('/home',checkLoggedIn,(req,res)=>{res.render('home')})
+
+app.get('/history',checkLoggedIn,function(req,res){
     res.render('history')
 })
 
-app.get('/doctorsearch',function(req,res){
+app.get('/doctorsearch',checkLoggedIn,function(req,res){
     res.render('doctorsearch')
 })
 
-app.get('/doctorhome',function(req,res){
+app.get('/doctorhome',checkLoggedIn,function(req,res){
     res.render('doctorhome')
 })
 
 
-app.get('/appointment',function(req,res){
+app.get('/appointment',checkLoggedIn,function(req,res){
     res.render('appointment')
 })
 
 
 
 
+function checkLoggedIn(req, res, next) {
+    if (req.user) {
+      return next()
+    }
+    res.redirect('/login')
+}
 
 
 
-
+app.post('/login',passport.authenticate('local',{failureRedirect:'/login'}),function(req,res){
+    console.log(req.user)
+    if(req.user.usertype=='doctor')
+    res.redirect('/doctorhome');
+    else 
+    {
+        res.redirect('/home');
+    }
+})
 
 
 
@@ -151,10 +167,10 @@ app.get('/signup',(req,res)=>{
 
 
 
-// app.get('/logout',(req,res)=>{
-//     req.logout();
-//     res.redirect('/user/')
-// })
+app.get('/logout',(req,res)=>{
+    req.logout();
+    res.redirect('/')
+})
 
 
 
