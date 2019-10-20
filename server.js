@@ -50,7 +50,7 @@ app.get('/adddetails',(req,res)=>{
 })
 
 app.get('/',function(req,res){
-    res.render('home');
+    res.render('homemain');
 })
 
 app.get('/history',function(req,res){
