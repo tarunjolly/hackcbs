@@ -1,62 +1,54 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="home.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Doctor Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/index.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-        <a class="navbar-brand" href="/doctorhome">HOME</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/doctorsearch">Search<span class="sr-only">(current)</span></a>
-                </li>
-
-
-                
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <a class="nav-link" href="/logout">logout<span class="sr-only">(current)</span></a>
-            </form>
-
-        </div>
+            <a class="navbar-brand" href="#">HOME</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/doctorsearch">Search<span class="sr-only">(current)</span></a>
+                    </li>
+                    {{!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Book appointment<span class="sr-only">(current)</span></a>
+                    </li>                 --}}
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="nav-link" href="/logout">logout<span class="sr-only">(current)</span></a>
+                </form>        
+            </div>
     </nav>
-////doctor home
 
-<div class="container emp-profile">
+    <div class="container emp-profile">
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <img src="data:image/jpeg;base64,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" alt=""/>
                             <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
@@ -66,7 +58,7 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                            Mikhail Varshavski
                                     </h5>
                                     <!-- <h6>
                                         Web Developer and Designer
@@ -77,7 +69,7 @@
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Appointments</a>
                                 </li>
                             </ul>
                         </div>
@@ -88,30 +80,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <!-- <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
-                        </div> -->
                     </div>
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>User Id</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti123</p>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Name</label>
@@ -137,71 +109,75 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <!-- <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div> -->
-                                            <!-- <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
-                                            </div> -->
+                                            <div class="col-md-6">
+                                                <label >Specialization</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Cardiologist</p>
+                                            </div>
                                         </div>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>BMI</label>
+                                                <label>Next Appointment</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>25</p>
+                                                <p>24/10/19</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Weight</label>
+                                                <label>Last Appointment</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>60</p>
+                                                <p>19/10/19</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Height</label>
+                                                <label>Rate Displayed on Website</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>175 cm</p>
+                                                <p>1300</p>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Body Fat Percentage</label>
+                                                <div class="col-md-6">
+                                                    <label>Your Rating</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>92%</p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <p>10%</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <!-- <div class="col-md-6">
-                                                <label>Av</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div> -->
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
-                                    </div>
-                                </div>
                             </div>
                             
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>S. No.</th>
+                            <th>Appointments</th>
+                            <th>Date</th>
+                            <th>Payment</th>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Mr Chadda Prashad</td>
+                            <td>19/10/19</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                                <td>18</td>
+                                <td>Mrs Sunita</td>
+                                <td>16/10/19</td>
+                                <td>Paid</td>
+                            </tr>
+                    </table>
+                </div>
             </form>           
         </div>
-
-
 </body>
 </html>
-
-
