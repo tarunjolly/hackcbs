@@ -57,6 +57,13 @@ app.get('/history',function(req,res){
     res.render('history')
 })
 
+app.get('/doctorsearch',function(req,res){
+    res.render('doctorsearch')
+})
+
+app.get('/doctorhome',function(req,res){
+    res.render('doctorhome')
+})
 
 
 app.get('/appointment',function(req,res){
