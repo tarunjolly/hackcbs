@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/tarunjolly/hackcbs#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "hbs": "^4.0.6",
     "passport": "^0.4.0",
